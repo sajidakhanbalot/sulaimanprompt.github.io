@@ -6,17 +6,17 @@
 
 <style>
     body {
-        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+        background: radial-gradient(circle at top, #e0e7ff, #f8fafc);
         font-family: "Georgia", serif;
     }
 
     .certificate {
-        width: 1100px;
-        height: 700px;
-        margin: 30px auto;
+        width: 1200px;
+        height: 760px;
+        margin: 25px auto;
         background: #ffffff;
-        border: 14px solid #1e3a8a;
-        padding: 50px;
+        border: 16px solid #1e3a8a;
+        padding: 55px;
         position: relative;
         box-sizing: border-box;
     }
@@ -24,130 +24,148 @@
     .certificate::after {
         content: "";
         position: absolute;
-        inset: 25px;
+        inset: 28px;
         border: 3px solid #d4af37;
         pointer-events: none;
     }
 
-    /* Logo */
+    /* LOGO */
     .logo {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
         margin-bottom: 20px;
     }
 
-    .logo h2 {
-        font-size: 30px;
-        color: #1e3a8a;
-        margin: 0;
+    .logo svg {
+        width: 70px;
+        height: 70px;
     }
 
-    .logo span {
-        font-size: 16px;
-        color: #555;
+    .logo-text h2 {
+        margin: 0;
+        font-size: 34px;
+        color: #1e3a8a;
         letter-spacing: 1px;
     }
 
-    /* Header */
+    .logo-text span {
+        font-size: 15px;
+        color: #444;
+        letter-spacing: 1.2px;
+    }
+
+    /* HEADER */
     .header {
         text-align: center;
         margin-top: 25px;
     }
 
     .header h1 {
-        font-size: 52px;
-        margin-bottom: 10px;
-        color: #000;
-        letter-spacing: 2px;
+        font-size: 54px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
     }
 
     .divider {
-        width: 120px;
+        width: 140px;
         height: 4px;
-        background: #d4af37;
+        background: linear-gradient(to right, #d4af37, #1e3a8a);
         margin: 20px auto;
     }
 
-    /* Content */
+    /* CONTENT */
     .content {
         text-align: center;
-        margin-top: 30px;
+        margin-top: 35px;
     }
 
     .content p {
-        font-size: 22px;
+        font-size: 23px;
         color: #333;
     }
 
     .student-name {
-        font-size: 42px;
+        font-size: 46px;
         font-weight: bold;
-        margin: 25px 0;
+        margin: 28px 0;
         color: #1e3a8a;
         text-decoration: underline;
     }
 
     .course {
-        font-size: 24px;
-        margin-top: 15px;
+        font-size: 26px;
+        margin-top: 18px;
     }
 
     .grade {
-        margin-top: 30px;
-        font-size: 28px;
+        margin-top: 35px;
+        font-size: 30px;
         font-weight: bold;
         color: #000;
     }
 
-    /* Seal */
+    /* SEAL */
     .seal {
         position: absolute;
-        right: 80px;
-        bottom: 190px;
-        width: 140px;
-        height: 140px;
-        background: radial-gradient(circle, #facc15, #d4af37);
+        right: 90px;
+        bottom: 220px;
+        width: 160px;
+        height: 160px;
+        background: radial-gradient(circle, #fde68a, #d4af37);
         border-radius: 50%;
-        border: 6px solid #1e3a8a;
+        border: 7px solid #1e3a8a;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 28px;
+        font-size: 32px;
         font-weight: bold;
         color: #1e3a8a;
     }
 
-    /* Footer */
+    /* FOOTER */
     .footer {
         position: absolute;
-        bottom: 70px;
-        left: 80px;
-        right: 80px;
+        bottom: 80px;
+        left: 90px;
+        right: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 18px;
     }
 
     .signature {
         text-align: center;
-        font-size: 18px;
     }
 
-    .signature .line {
-        width: 260px;
+    .line {
+        width: 280px;
         border-top: 2px solid #000;
-        margin: 10px auto 5px;
+        margin: 10px auto 6px;
     }
 
     .signature strong {
         display: block;
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .signature small {
-        color: #555;
         font-size: 14px;
+        color: #555;
     }
 
+    .meta {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 14px;
+        color: #444;
+        letter-spacing: 1px;
+    }
 </style>
 </head>
 
@@ -155,21 +173,32 @@
 
 <div class="certificate">
 
-    <!-- Logo -->
+    <!-- LOGO -->
     <div class="logo">
-        <h2>Sajida Khan Balot</h2>
-        <span>International Trainer & Developer</span>
+        <!-- REAL SVG LOGO -->
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#1e3a8a"/>
+            <text x="50%" y="55%" text-anchor="middle" fill="#d4af37"
+                  font-size="38" font-family="Georgia" font-weight="bold">
+                SKB
+            </text>
+        </svg>
+
+        <div class="logo-text">
+            <h2>Sajida Khan Balot</h2>
+            <span>International Trainer & Developer</span>
+        </div>
     </div>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <div class="header">
         <h1>CERTIFICATE OF COMPLETION</h1>
         <div class="divider"></div>
     </div>
 
-    <!-- Content -->
+    <!-- CONTENT -->
     <div class="content">
-        <p>This certificate is proudly awarded to</p>
+        <p>This certificate is proudly presented to</p>
 
         <div class="student-name">Sulaiman Popal</div>
 
@@ -184,10 +213,10 @@
         </div>
     </div>
 
-    <!-- Seal -->
+    <!-- SEAL -->
     <div class="seal">A+</div>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <div class="footer">
         <div class="signature">
             <div class="line"></div>
@@ -197,17 +226,24 @@
 
         <div class="signature">
             <div class="line"></div>
-            <strong>Date</strong>
+            <strong>14 Dec 2025</strong>
+            <small>Issue Date</small>
         </div>
 
         <div class="signature">
             <div class="line"></div>
-            <strong>Certificate ID</strong>
+            <strong>2af00471</strong>
+            <small>Certificate ID</small>
         </div>
+    </div>
+
+    <div class="meta">
+        This certificate is digitally verifiable and issued under authorized supervision.
     </div>
 
 </div>
 
 </body>
 </html>
+
 
